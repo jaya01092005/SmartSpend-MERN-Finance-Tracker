@@ -1,0 +1,9 @@
+node_modules
+.env
+dist
+.DS_Store
+coverage
+todo.md 
+PRD.txt
+design.txt
+techstack.txt
