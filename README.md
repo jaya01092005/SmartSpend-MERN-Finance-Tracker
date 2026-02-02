@@ -1,18 +1,18 @@
 # SmartSpend - AI Personal Finance Tracker
 
-## 🚀 Project Assignment: Budget Tracking Application
+##  Project Assignment: Budget Tracking Application
 **SmartSpend** is a full-stack MERN application designed to help users manage their finances efficiently. It features transaction tracking, budget management, interactive charts, and **AI-powered financial insights**.
 
 ---
 
-## 🔗 Live Links
+##  Live Links
 - **Hosted Application:** [https://smartspend-mern-finance-tracker.onrender.com](https://smartspend-mern-finance-tracker.onrender.com)
-- **Demo Video:** [Link to your Google Drive/YouTube Video]
+- **Demo Video:** https://drive.google.com/file/d/1YEfXUgh3986BmnsjnvABLuOTA5NBSgOY/view
 - **GitHub Repository:** [https://github.com/jaya01092005/SmartSpend-MERN-Finance-Tracker](https://github.com/jaya01092005/SmartSpend-MERN-Finance-Tracker)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **Frontend:** React + Vite, Tailwind CSS, Redux Toolkit, Recharts
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB Atlas
@@ -21,14 +21,14 @@
 
 ---
 
-## 📂 Documentation & Architecture
-We have included detailed documentation in this repository:
+##  Documentation & Architecture
+Detailed Documentation has also been included in this repository:
 - **[Architecture & Flow Diagrams](./docs/ARCHITECTURE.md)**: System design and data flow.
 - **[Test Report](./test-report.md)**: Manual testing results and strategy.
 
 ---
 
-## ✅ Features
+##  Features
 1.  **User Authentication**: Secure Login/Signup with JWT & bcrypt.
 2.  **Transactions**: Add, Edit, Delete Income/Expenses.
 3.  **Budgeting**: Set monthly limits per category with visual progress bars.
@@ -40,7 +40,7 @@ We have included detailed documentation in this repository:
 
 ---
 
-## ⚙️ Setup Instructions (Local)
+##  Setup Instructions (Local)
 
 1.  **Clone the repository**
     ```bash
@@ -78,7 +78,7 @@ We have included detailed documentation in this repository:
 
 ---
 
-## ☁️ Deployment Steps (Render)
+##  Deployment Steps (Render)
 This project is configured for **Render** (Web Service).
 1.  Connect GitHub repo to Render.
 2.  Set Build Command: `npm install && npm run build`
@@ -88,3 +88,4 @@ This project is configured for **Render** (Web Service).
 ---
 
 **Submitted by:** Jayashree M
+
