@@ -13,7 +13,7 @@ export const getBudgets = createAsyncThunk('budgets/getBudgets', async (_, thunk
     const config = {
       headers: { Authorization: `Bearer ${token}` }
     };
-    const res = await axios.get('http://localhost:5000/api/budgets', config);
+    const res = await axios.get('/api/budgets', config);
     return res.data.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
@@ -29,7 +29,7 @@ export const addBudget = createAsyncThunk('budgets/addBudget', async (budgetData
         'Content-Type': 'application/json'
       }
     };
-    const res = await axios.post('http://localhost:5000/api/budgets', budgetData, config);
+    const res = await axios.post('/api/budgets', budgetData, config);
     return res.data.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
@@ -42,7 +42,7 @@ export const deleteBudget = createAsyncThunk('budgets/deleteBudget', async (id, 
     const config = {
       headers: { Authorization: `Bearer ${token}` }
     };
-    await axios.delete(`http://localhost:5000/api/budgets/${id}`, config);
+    await axios.delete(`/api/budgets/${id}`, config);
     return id;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);

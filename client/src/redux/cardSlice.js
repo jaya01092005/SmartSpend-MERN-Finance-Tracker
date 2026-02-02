@@ -13,7 +13,7 @@ export const getCards = createAsyncThunk('cards/getCards', async (_, thunkAPI) =
     const config = {
       headers: { Authorization: `Bearer ${token}` }
     };
-    const res = await axios.get('http://localhost:5000/api/cards', config);
+    const res = await axios.get('/api/cards', config);
     return res.data.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
@@ -26,7 +26,7 @@ export const addCard = createAsyncThunk('cards/addCard', async (cardData, thunkA
     const config = {
       headers: { Authorization: `Bearer ${token}` }
     };
-    const res = await axios.post('http://localhost:5000/api/cards', cardData, config);
+    const res = await axios.post('/api/cards', cardData, config);
     return res.data.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
@@ -39,7 +39,7 @@ export const deleteCard = createAsyncThunk('cards/deleteCard', async (id, thunkA
     const config = {
       headers: { Authorization: `Bearer ${token}` }
     };
-    await axios.delete(`http://localhost:5000/api/cards/${id}`, config);
+    await axios.delete(`/api/cards/${id}`, config);
     return id;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);

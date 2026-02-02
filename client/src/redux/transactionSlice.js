@@ -13,7 +13,7 @@ export const getTransactions = createAsyncThunk('transactions/getTransactions', 
     const config = {
       headers: { Authorization: `Bearer ${token}` }
     };
-    const res = await axios.get('http://localhost:5000/api/transactions', config);
+    const res = await axios.get('/api/transactions', config);
     return res.data.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
@@ -26,7 +26,7 @@ export const addTransaction = createAsyncThunk('transactions/addTransaction', as
     const config = {
       headers: { Authorization: `Bearer ${token}` }
     };
-    const res = await axios.post('http://localhost:5000/api/transactions', transactionData, config);
+    const res = await axios.post('/api/transactions', transactionData, config);
     return res.data.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
@@ -39,7 +39,7 @@ export const updateTransaction = createAsyncThunk('transactions/updateTransactio
       const config = {
         headers: { Authorization: `Bearer ${token}` }
       };
-      const res = await axios.put(`http://localhost:5000/api/transactions/${id}`, transactionData, config);
+      const res = await axios.put(`/api/transactions/${id}`, transactionData, config);
       return res.data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data.error);
@@ -52,7 +52,7 @@ export const deleteTransaction = createAsyncThunk('transactions/deleteTransactio
     const config = {
       headers: { Authorization: `Bearer ${token}` }
     };
-    await axios.delete(`http://localhost:5000/api/transactions/${id}`, config);
+    await axios.delete(`/api/transactions/${id}`, config);
     return id;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.error);
