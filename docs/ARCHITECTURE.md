@@ -5,11 +5,11 @@ The application follows a standard **MERN Stack** architecture (Monolith deploym
 
 ```mermaid
 graph TD
-    User[User Client] -->|HTTPS Requests| Cloud[Cloud Hosting (Render)]
+    User[User Client] -->|HTTPS Requests| Cloud["Cloud Hosting (Render)"]
     
     subgraph "Render Environment"
-        Frontend[React Frontend (Vite)]
-        Backend[Node/Express Server]
+        Frontend["React Frontend (Vite)"]
+        Backend["Node/Express Server"]
         
         Frontend -->|API Calls /api/...| Backend
         Backend -->|Serve Static Files| Frontend
@@ -25,9 +25,9 @@ Secure login process using JSON Web Tokens.
 ```mermaid
 sequenceDiagram
     participant U as User
-    participant F as Frontend (React)
-    participant B as Backend (Express)
-    participant D as Database (MongoDB)
+    participant F as "Frontend (React)"
+    participant B as "Backend (Express)"
+    participant D as "Database (MongoDB)"
 
     U->>F: Enter Credentials
     F->>B: POST /api/auth/login
