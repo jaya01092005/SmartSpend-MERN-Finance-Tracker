@@ -20,9 +20,7 @@ An AI-Powered Personal Budget Tracking Application built with the MERN stack.
 ### 1. Backend Setup
 
 1.  Navigate to the root directory:
-    ```bash
-    cd c:/Users/JAYASHREE MANIKANDAN/adya
-    ```
+    
 2.  Install dependencies:
     ```bash
     npm install
@@ -65,3 +63,4 @@ The AI engine (`controllers/ai.js`) uses a hybrid approach combining **Content A
 - **Auth**: JWT, BcryptJS
 
 Enjoy tracking your finances with intelligence! 🚀
+
