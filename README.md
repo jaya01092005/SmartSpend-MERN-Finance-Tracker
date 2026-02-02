@@ -1,66 +1,90 @@
-# SmartSpend 💰
+# SmartSpend - AI Personal Finance Tracker
 
-An AI-Powered Personal Budget Tracking Application built with the MERN stack.
+## 🚀 Project Assignment: Budget Tracking Application
+**SmartSpend** is a full-stack MERN application designed to help users manage their finances efficiently. It features transaction tracking, budget management, interactive charts, and **AI-powered financial insights**.
 
-## 🌟 Features
+---
 
-- **Dashboard**: Visual overview of income, expenses, and balance.
-- **AI Insights**: Intelligent analysis of spending habits (e.g., " Weekend Spender", "Category Spikes").
-- **Transaction Management**: Add, edit, filter, and delete transactions easily.
-- **Secure Auth**: JWT-based authentication with protected routes.
-- **Modern UI**: Clean, pastel-themed interface using Tailwind CSS.
+## 🔗 Live Links
+- **Hosted Application:** [https://smartspend-mern-finance-tracker.onrender.com](https://smartspend-mern-finance-tracker.onrender.com)
+- **Demo Video:** [Link to your Google Drive/YouTube Video]
+- **GitHub Repository:** [https://github.com/jaya01092005/SmartSpend-MERN-Finance-Tracker](https://github.com/jaya01092005/SmartSpend-MERN-Finance-Tracker)
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v14+)
-- MongoDB (Local or Atlas URL)
-
-### 1. Backend Setup
-
-1.  Navigate to the root directory:
-    
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
-3.  Start the server:
-    ```bash
-    npm run dev
-    ```
-    *Server runs on port 5000*
-
-### 2. Frontend Setup
-
-1.  Open a new terminal and navigate to the client folder:
-    ```bash
-    cd client
-    ```
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
-3.  Start the development server:
-    ```bash
-    npm run dev
-    ```
-4.  Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-## 🧠 How the AI Works
-
-The AI engine (`controllers/ai.js`) uses a hybrid approach combining **Content Analysis** and **Similarity-Based Recommendations**:
-1.  **Content Analysis & NLP**: It categorizes and analyzes text descriptions of your transactions to understand spending contexts.
-2.  **Similarity-Based Recommendation**: It builds a "User Preference Vector" based on your spending distribution. It then calculates the Cosine Similarity between your current habits and ideal financial models to generate personalized advice.
-3.  **Pattern Detection**:
-    *   **Category Spikes**: Detects if your current spending in a category is significantly higher than your average.
-    *   **Weekend Habits**: Checks if a disproportionate amount of spending happens on weekends.
+---
 
 ## 🛠️ Tech Stack
+- **Frontend:** React + Vite, Tailwind CSS, Redux Toolkit, Recharts
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB Atlas
+- **AI Tool:** Google Gemini AI API (for personalized insights & categorization)
+- **Deployment:** Render (Backend + Frontend Monolith)
 
-- **Frontend**: React, Vite, Redux Toolkit, Tailwind CSS, Recharts
-- **Backend**: Node.js, Express, MongoDB, Mongoose
-- **Auth**: JWT, BcryptJS
+---
 
-Enjoy tracking your finances with intelligence! 🚀
+## 📂 Documentation & Architecture
+We have included detailed documentation in this repository:
+- **[Architecture & Flow Diagrams](./docs/ARCHITECTURE.md)**: System design and data flow.
+- **[Test Report](./test-report.md)**: Manual testing results and strategy.
 
+---
+
+## ✅ Features
+1.  **User Authentication**: Secure Login/Signup with JWT & bcrypt.
+2.  **Transactions**: Add, Edit, Delete Income/Expenses.
+3.  **Budgeting**: Set monthly limits per category with visual progress bars.
+4.  **Cards**: Manage linked payment methods.
+5.  **Visualizations**: Interactive Pie & Area charts for financial overview.
+6.  **AI Insights**:
+    *   **Content Analysis**: The AI analyzes transaction descriptions to categorize them automatically if needed.
+    *   **Similarity-Based Recommendations**: Uses historical data pattern matching to suggest "Savings Wins" or alert on "Category Spikes".
+
+---
+
+## ⚙️ Setup Instructions (Local)
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/jaya01092005/SmartSpend-MERN-Finance-Tracker.git
+    cd SmartSpend-MERN-Finance-Tracker
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    # Install Root/Backend dependencies
+    npm install
+
+    # Install Client/Frontend dependencies
+    cd client
+    npm install
+    cd ..
+    ```
+
+3.  **Environment Variables**
+    Create a `.env` file in the root directory (refer to `.env.example`):
+    ```env
+    PORT=5000
+    MONGO_URI=your_mongodb_connection_string
+    JWT_SECRET=your_jwt_secret
+    GEMINI_API_KEY=your_gemini_api_key
+    NODE_ENV=development
+    ```
+
+4.  **Run the App**
+    ```bash
+    # Run both Backend & Frontend concurrently
+    npm run dev
+    ```
+    The app will open at `http://localhost:5173`.
+
+---
+
+## ☁️ Deployment Steps (Render)
+This project is configured for **Render** (Web Service).
+1.  Connect GitHub repo to Render.
+2.  Set Build Command: `npm install && npm run build`
+3.  Set Start Command: `npm start`
+4.  Add Environment Variables in Render Dashboard.
+
+---
+
+**Submitted by:** Jayashree M
