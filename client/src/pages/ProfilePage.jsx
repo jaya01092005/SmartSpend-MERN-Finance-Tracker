@@ -123,7 +123,7 @@ const ChangePasswordModal = ({ token, onClose }) => {
         setLoading(true);
         setMessage(null);
         try {
-            await axios.put('http://localhost:5000/api/auth/updatepassword', passData, {
+            await axios.put('/api/auth/updatepassword', passData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setMessage({ type: 'success', text: 'Password updated successfully!' });

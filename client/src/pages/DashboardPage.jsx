@@ -48,7 +48,7 @@ const DashboardPage = () => {
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
-            <h2 className="text-3xl font-bold text-text-primary">Welcome, {user?.name.split(' ')[0]}</h2>
+            <h2 className="text-3xl font-bold text-text-primary">Welcome, {user?.name ? user.name.split(' ')[0] : 'User'}</h2>
             <p className="text-text-muted mt-1">Continue your journey to financial success.</p>
         </div>
       </div>

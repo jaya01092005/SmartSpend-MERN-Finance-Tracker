@@ -14,7 +14,7 @@ const FloatingAI = () => {
     const fetchInsights = async () => {
         setLoading(true);
         try {
-            const res = await axios.get('http://localhost:5000/api/ai/insights', {
+            const res = await axios.get('/api/ai/insights', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setInsights(res.data.insights);
