@@ -15,6 +15,7 @@
     "jsonwebtoken": "^9.0.2",
     "jspdf": "^4.0.0",
     "jspdf-autotable": "^5.0.7",
+    "mongodb": "^7.0.0",
     "mongoose": "^8.0.3"
   },
   "devDependencies": {
